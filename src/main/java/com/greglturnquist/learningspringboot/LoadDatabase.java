@@ -6,8 +6,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.beans.BeanProperty;
-
 @Configuration // indicates source of beans
 public class LoadDatabase {
 
@@ -20,7 +18,6 @@ public class LoadDatabase {
                     new Chapter("...and more!"))
                     .flatMap(repository::save)
                     .subscribe(System.out::println);
-            )
-        }
+        };
     }
 }
